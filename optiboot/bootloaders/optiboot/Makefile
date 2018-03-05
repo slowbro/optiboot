@@ -161,11 +161,12 @@ endif
 
 # in mhz. default 16mhz
 ifdef FREQ
-AVR_FREQ = $(shell echo $(FREQ)\*1000000 | bc)L
+AVR_FREQ = $(FREQ)000000L
 SUFFIX_FREQ = _$(FREQ)MHz
 dummy = FORCE
 else
 AVR_FREQ = 16000000L
+SUFFIX_FREQ = _16MHz
 endif
 
 
